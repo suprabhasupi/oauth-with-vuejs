@@ -1,8 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "../views/Home.vue";
-// import Profile from "../views/Profile.vue";
-// import { authGuard } from "../auth";
+import Profile from "../views/Profile.vue";
+import { authGuard } from "../auth";
 
 Vue.use(Router);
 
@@ -15,12 +15,12 @@ const router = new Router({
       name: "home",
       component: Home
     },
-    // {
-    //   path: "/profile",
-    //   name: "profile",
-    //   component: Home,
-    //   beforeEnter: authGuard
-    // }
+    {
+      path: "/profile",
+      name: "profile",
+      component: Profile,
+      beforeEnter: authGuard
+    }
   ]
 });
 
